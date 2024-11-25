@@ -1,0 +1,30 @@
+
+
+import React, { useRef } from 'react'
+import { useGLTF } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
+
+export function HatModel(props) {
+
+  const modelRef= useRef(null)
+  useFrame(()=>{
+    if(modelRef.current){
+        modelRef.current.rotation.y += 0.02
+    }
+  })
+  const { nodes, materials } = useGLTF('/models/hat-transformed.glb')
+  return (
+    <group {...props} dispose={null} ref={modelRef} scale={1.5} rotation={[0.35,0,0]}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_2.geometry}
+        material={materials.initialShadingGroup}
+        position={[0, -3.867, 0]}
+        rotation={[-Math.PI / 2, 0, 0]}
+      />
+    </group>
+  )
+}
+
+useGLTF.preload('/models/hat-transformed.glb')

@@ -1,7 +1,13 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import clsx from "clsx";
+import FireFlies from "./comps/FireFlies";
+import { Toaster } from 'sonner';
+import Sound from "./comps/Sound";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] ,
+  variable:'--font-inter',
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +17,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={clsx(inter.variable,'bg-background text-foreground font-inter')}>
+        {children}
+        <FireFlies/>
+        <Toaster richColors={true} />
+        <Sound/>
+      </body>
     </html>
   );
 }
