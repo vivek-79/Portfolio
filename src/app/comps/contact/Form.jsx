@@ -71,7 +71,7 @@ export default function Form() {
      initial ='hidden'
      animate = 'show'
      onSubmit={handleSubmit(onSubmit)}
-     className='max-w-md w-full flex flex-col items-center justify-center space-y-4'
+     className='max-w-md px-[5px] md:px-0 w-full  flex flex-col items-center justify-center space-y-4'
     >
       
       <motion.input
