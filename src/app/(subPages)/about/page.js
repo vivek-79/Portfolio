@@ -8,7 +8,7 @@ import AboutDetails from "@/app/comps/about";
 export default function About() {
   return (
     <main className="w-full h-screen ">
-      <img id="back-gnd" src='/background/about-background.png' alt="background-img" className="fixed top-0 left-0 w-full h-full object-center object-cover opacity-25" />
+      <img fetchPriority="high" sizes="100vw" id="back-gnd" src='/background/about-background.png' alt="background-img" className="fixed top-0 left-0 w-full h-full object-center object-cover opacity-25" />
       <div className="w-full h-3/5 xs:h-3/4 sm:h-screen absolute top-1/2 -translate-y-1/2 left-0">
         <RenderModel>
           <HatModel />

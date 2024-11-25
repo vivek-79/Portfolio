@@ -9,7 +9,7 @@ import Form from "@/app/comps/contact/Form";
 export default function Contact() {
   return (
     <main>
-      <img id="back-gnd" src='/background/contact-background.png' alt="background-img" className="fixed top-0 left-0 w-full h-full object-center object-cover opacity-25" />
+      <img id="back-gnd" fetchPriority="high" sizes="100vw" src='/background/contact-background.png' alt="background-img" className="fixed top-0 left-0 w-full h-full object-center object-cover opacity-25" />
       <article className="py-8 sm:py-0 relative w-full flex flex-col items-center justify-center space-y-8 ">
           <div className="flex flex-col items-center justify-center space-y-6 w-full sm:w-3/4">
             <h1 className="text-accent font-semibold text-center text-4xl capitalize whitespace-nowrap">
