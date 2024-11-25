@@ -17,7 +17,7 @@ export default function About() {
       <div className="relative w-full h-screen flex flex-col items-center justify-center">
         <div className="absolute w-full flex flex-col text-center top-[50%] sm:top-[40%] left-1/2 -translate-x-1/2">
           <h1 className="font-bold text-6xl text-accent">Vivek</h1>
-          <code className="text-white w-full whitespace-nowwrap">If <p className="inline text-blue-400">(</p>heart ===<p className="inline text-green-400">'beating'</p><p className="inline text-blue-400">)</p>
+          <code className="text-white w-full whitespace-nowwrap">If <p className="inline text-blue-400">(</p>heart ===<p className="inline text-green-400">&apos;beating&apos;</p><p className="inline text-blue-400">)</p>
             <p className="inline text-pink-400">{'{'}</p><br />
             return <p className="inline text-red-500">(</p><br />
             <p>wake</p>
